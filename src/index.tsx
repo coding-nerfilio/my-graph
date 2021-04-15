@@ -5,11 +5,14 @@ import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import ChartList from "./ChartList";
 import ChartEditor from "./ChartEditor/ChartEditor";
+import Store from "./shared/store";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<ChartList />
-		<ChartEditor />
+		<Store>
+			<ChartList />
+			<ChartEditor />
+		</Store>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
