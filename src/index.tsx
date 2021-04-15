@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
+import ChartList from "./ChartList";
+import ChartEditor from "./ChartEditor/ChartEditor";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		<ChartList />
+		<ChartEditor />
 	</React.StrictMode>,
 	document.getElementById("root")
 );
