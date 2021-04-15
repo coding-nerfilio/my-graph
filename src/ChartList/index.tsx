@@ -4,8 +4,8 @@ import ChartSelector from "./ChartSelector";
 const ChartList = () => {
 	return (
 		<div>
-			{charList.map((chart) => (
-				<ChartSelector name={chart.name} icon={chart.icon} />
+			{charList.map((chart, index) => (
+				<ChartSelector name={chart.name} icon={chart.icon} index={index} />
 			))}
 		</div>
 	);
