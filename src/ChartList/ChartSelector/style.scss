@@ -1,0 +1,47 @@
+$backgroundDefault: #1c0d11c3;
+$backgroundHover: #0e2c50;
+$backgroundClick: #7b58e4;
+
+.chart-selector {
+	width: 100%;
+	display: flex;
+
+	padding: 10px;
+	padding-left: 0;
+	padding-right: 0;
+	justify-content: center;
+
+	align-items: center;
+	color: white;
+
+	transition: 0.5s;
+	user-select: none;
+}
+
+.chart-selector-selected {
+	background-color: $backgroundClick;
+}
+
+.chart-selector:first-child {
+	margin-top: 20%;
+}
+
+.chart-selector:hover {
+	background-color: $backgroundHover;
+}
+
+.chart-selector:active {
+	background-color: $backgroundClick;
+}
+
+.chart-selector-icon {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 50%;
+	box-shadow: black 1px 1px;
+	overflow: hidden;
+	justify-content: center;
+	align-content: center;
+}

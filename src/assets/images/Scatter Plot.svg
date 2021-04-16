@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" fill="#F0F0F0"/>
+<rect x="76" y="76" width="360" height="360" fill="#F0F0F0"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 332.5 177)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 200.5 341)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 389.5 121)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 350.5 143)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 246.5 177)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 175.5 247)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 210.5 243)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 201.5 204)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 272.5 252)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 332.5 213)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 287.5 195)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 192.5 125)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 255.5 213)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 341.5 323)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 357.5 281)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 315.5 299)" fill="#FF0000"/>
+<ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 349.5 252)" fill="#FF0000"/>
+<line x1="123" y1="376" x2="404" y2="376" stroke="black" stroke-width="16"/>
+<line x1="134.995" y1="102.207" x2="130.739" y2="383.138" stroke="black" stroke-width="16"/>
+</svg>
