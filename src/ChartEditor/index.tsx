@@ -1,15 +1,11 @@
-import { useContext } from "react";
-import { Context } from "../shared/store";
-import { Action } from "../shared/store/actions";
-import { State } from "../types/store";
+import ChartHeader from "./ChartHeader";
 import "./style.scss";
 const ChartEditor = () => {
-	const [state] = useContext<[State, (action: Action) => null]>(Context);
 	return (
 		<div className="chart-editor">
-			Chart Editor
-			<br />
-			Selected index: {state.selectedChart}
+			<h1>MyGraph</h1>
+			<h4>Graphs generator</h4>
+			<ChartHeader />
 		</div>
 	);
 };

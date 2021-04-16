@@ -1,4 +1,4 @@
-import { Component, useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
 import { Context } from "../../shared/store";
 import Actions, { Action } from "../../shared/store/actions";

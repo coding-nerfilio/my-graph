@@ -7,10 +7,12 @@ import ChartList from "./ChartList";
 import ChartEditor from "./ChartEditor";
 import Store from "./shared/store";
 
+import "./assets/sass/flex.scss";
+
 ReactDOM.render(
 	<React.StrictMode>
 		<Store>
-			<div style={{ display: "flex" }}>
+			<div className="fr">
 				<ChartList />
 				<ChartEditor />
 			</div>
