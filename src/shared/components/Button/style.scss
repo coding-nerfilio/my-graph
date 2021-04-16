@@ -1,0 +1,28 @@
+@import "../../../assets/sass/colors.scss";
+
+.button {
+	user-select: none;
+	background-color: $unselected-background-color;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding: 6px;
+	padding-right: 12px;
+	padding-left: 12px;
+	border-radius: 5px;
+	box-shadow: 1px 1px black;
+	width: fit-content;
+	height: fit-content;
+	transition: 0.5s;
+}
+
+.button:hover {
+	transform: scale(1.1);
+	background-color: $hover-background-color;
+}
+
+.button:active {
+	transition: 0.2s;
+	transform: scale(0.7);
+	background-color: $click-background-color;
+}

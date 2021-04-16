@@ -1,10 +1,10 @@
-$backgroundDefault: #1c0d11c3;
+@import "../assets/sass/colors.scss";
 
 .chart-list {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: $backgroundDefault;
+	background-color: $unselected-background-color;
 }
 
 @media only screen and (max-width: 600px) {

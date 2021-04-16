@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import Button from "../../shared/components/Button";
 import charList from "../../shared/constants/chartsList";
 import { Context } from "../../shared/store";
 import { State } from "../../types/store";
@@ -12,9 +13,8 @@ const ChartHeader = () => {
 				<h3>{charList[state.selectedChart].name}</h3>
 			</div>
 			<div className="fr">
-				<button>Download</button>
-
-				<button>Style</button>
+				<Button mr={10}>Download</Button>
+				<Button>Style</Button>
 			</div>
 		</div>
 	);
