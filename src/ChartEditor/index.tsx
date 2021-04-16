@@ -1,4 +1,5 @@
 import ChartHeader from "./ChartHeader";
+import ChartInputs from "./ChartInputs";
 import ChartVisualize from "./ChartVisualize";
 import "./style.scss";
 const ChartEditor = () => {
@@ -7,6 +8,7 @@ const ChartEditor = () => {
 			<h1>MyGraph</h1>
 			<ChartHeader />
 			<ChartVisualize />
+			<ChartInputs />
 		</div>
 	);
 };

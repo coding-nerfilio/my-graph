@@ -3,8 +3,13 @@
 .chart-editor {
 	height: 100vh;
 	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
 	background-color: $chart-editor-background-color;
 	color: white;
 	padding-left: 10px;
 	padding-right: 10px;
+	align-items: center;
+	justify-content: center;
+	justify-items: center;
 }
