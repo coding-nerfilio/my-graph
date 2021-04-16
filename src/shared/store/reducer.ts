@@ -1,5 +1,5 @@
 import { State } from "../../types/store";
-import { EAction, Action } from "./actions";
+import { Action, EAction } from "./actions";
 
 import selectedChart from "./selectedChart/reducer";
 import chartStyle from "./chartStyle/reducer";
@@ -19,10 +19,10 @@ const RootReducer = (state: State, action: Action): State => {
 		case EAction.CHARLABEL_CLEAR:
 			return chartLabels(state, action);
 
+		case EAction.CHARTDATA_CLEAR:
 		case EAction.CHARTDATA_SETX:
 		case EAction.CHARTDATA_SETY:
 		case EAction.CHARTDATA_SETZ:
-		case EAction.CHARTDATA_CLEAR:
 			return chartData(state, action);
 
 		default:

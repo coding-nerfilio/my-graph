@@ -4,14 +4,16 @@ import ReactDOM from "react-dom";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import ChartList from "./ChartList";
-import ChartEditor from "./ChartEditor/ChartEditor";
+import ChartEditor from "./ChartEditor";
 import Store from "./shared/store";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Store>
-			<ChartList />
-			<ChartEditor />
+			<div style={{ display: "flex" }}>
+				<ChartList />
+				<ChartEditor />
+			</div>
 		</Store>
 	</React.StrictMode>,
 	document.getElementById("root")
@@ -26,3 +28,4 @@ serviceWorkerRegistration.unregister();
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+//afrobull naruto

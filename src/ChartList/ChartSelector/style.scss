@@ -3,19 +3,26 @@ $backgroundHover: #0e2c50;
 $backgroundClick: #7b58e4;
 
 .chart-selector {
-	width: 200px;
+	width: 300px;
 	display: flex;
-	background-color: $backgroundDefault;
+
 	padding: 10px;
+	padding-left: 55px;
+	padding-right: 55px;
 	justify-content: space-between;
+	align-items: center;
 	color: white;
-	border-top: 1px solid white;
+
 	transition: 0.5s;
 	user-select: none;
 }
 
 .chart-selector-selected {
 	background-color: $backgroundClick;
+}
+
+.chart-selector:first-child {
+	margin-top: 20%;
 }
 
 .chart-selector:hover {
@@ -28,10 +35,18 @@ $backgroundClick: #7b58e4;
 
 .chart-selector-icon {
 	display: flex;
-	margin-right: 10%;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 50%;
+	box-shadow: black 1px 1px;
+	overflow: hidden;
 }
 .chart-selector-name {
 	display: flex;
-	text-align: left;
-	flex-basis: 100%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	justify-self: center;
+	height: 100%;
 }

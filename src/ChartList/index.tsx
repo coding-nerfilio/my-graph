@@ -1,11 +1,15 @@
-import charList from "../types/chartsList";
+import Icon from "../shared/components/Icon";
+import charList from "../shared/constants/chartsList";
 import ChartSelector from "./ChartSelector";
+import "./style.scss";
 
 const ChartList = () => {
 	return (
-		<div>
+		<div className="chart-list">
 			{charList.map((chart, index) => (
-				<ChartSelector name={chart.name} icon={chart.icon} index={index} />
+				<ChartSelector name={chart.name} index={index}>
+					<Icon name={chart.icon} />
+				</ChartSelector>
 			))}
 		</div>
 	);

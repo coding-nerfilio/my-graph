@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { Component, useContext, useEffect, useState } from "react";
+
 import { Context } from "../../shared/store";
 import Actions, { Action } from "../../shared/store/actions";
 import { State } from "../../types/store";
 import "./style.scss";
 
 const ChartSelector = (props: {
-	icon: string;
+	children: any;
 	name: string;
 	index: number;
 }) => {
@@ -24,7 +25,7 @@ const ChartSelector = (props: {
 					: "chart-selector"
 			}
 		>
-			<div className="chart-selector-icon">{props.icon}</div>
+			<div className="chart-selector-icon">{props.children}</div>
 			<div className="chart-selector-name">{props.name}</div>
 		</div>
 	);

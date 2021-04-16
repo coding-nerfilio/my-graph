@@ -1,0 +1,8 @@
+$backgroundDefault: #1c0d11c3;
+
+.chart-list {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: $backgroundDefault;
+}
