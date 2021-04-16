@@ -32,7 +32,7 @@ export const textToArray = (input: string): Array<number> => {
 export const arrayToText = (input: Array<any>) => {
 	let returnValue: string = "";
 	for (let i = 0; i < input.length; i++) {
-		returnValue += String(input[i]) + (i === input.length - 1 ? "" : ",");
+		returnValue += String(input[i]) + ",";
 	}
 	return returnValue;
 };

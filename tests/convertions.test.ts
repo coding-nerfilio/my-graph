@@ -33,4 +33,8 @@ describe("Array to text", () => {
 		let value = arrayToText([300, 312, 32.45, 302]);
 		expect(value).toBe("300,312,32.45,302");
 	});
+	test("Empty array", () => {
+		let value = arrayToText([]);
+		expect(value).toBe("");
+	});
 });

@@ -1,15 +1,15 @@
 import { Action, EAction } from "../actions";
 
 const chartData = {
-	setX: (value: Array<number>): Action => ({
+	setX: (value: string): Action => ({
 		type: EAction.CHARTDATA_SETX,
 		payload: value,
 	}),
-	setY: (value: Array<number>): Action => ({
+	setY: (value: string): Action => ({
 		type: EAction.CHARTDATA_SETY,
 		payload: value,
 	}),
-	setZ: (value: Array<number>): Action => ({
+	setZ: (value: string): Action => ({
 		type: EAction.CHARTDATA_SETZ,
 		payload: value,
 	}),

@@ -24,9 +24,9 @@ export type Action =
 	| { type: EAction.CHARTLABEL_SETX; payload: string }
 	| { type: EAction.CHARTLABEL_SETY; payload: string }
 	| { type: EAction.CHARLABEL_CLEAR; payload: null }
-	| { type: EAction.CHARTDATA_SETX; payload: Array<number> }
-	| { type: EAction.CHARTDATA_SETY; payload: Array<number> }
-	| { type: EAction.CHARTDATA_SETZ; payload: Array<number> }
+	| { type: EAction.CHARTDATA_SETX; payload: string }
+	| { type: EAction.CHARTDATA_SETY; payload: string }
+	| { type: EAction.CHARTDATA_SETZ; payload: string }
 	| { type: EAction.CHARTDATA_CLEAR; payload: null };
 
 const Actions = {

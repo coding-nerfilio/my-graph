@@ -6,8 +6,8 @@ export type State = {
 };
 
 export const initialState: State = {
-	selectedChart: 1,
-	chartData: { x: [], y: [], z: [] },
+	selectedChart: 0,
+	chartData: { x: [32, 34, 55, 6.1, 100], y: [], z: [] },
 	chartStyle: 0,
 	chartLabels: { x: "X", y: "Y" },
 };
