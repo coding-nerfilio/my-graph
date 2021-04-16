@@ -7,7 +7,7 @@ const ChartList = () => {
 	return (
 		<div className="chart-list">
 			{charList.map((chart, index) => (
-				<ChartSelector name={chart.name} index={index}>
+				<ChartSelector name={chart.name} index={index} key={index}>
 					<Icon name={chart.icon} />
 				</ChartSelector>
 			))}
