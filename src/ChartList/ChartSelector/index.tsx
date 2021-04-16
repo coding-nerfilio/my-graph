@@ -26,7 +26,6 @@ const ChartSelector = (props: {
 			}
 		>
 			<div className="chart-selector-icon">{props.children}</div>
-			<div className="chart-selector-name">{props.name}</div>
 		</div>
 	);
 };

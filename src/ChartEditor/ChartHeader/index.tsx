@@ -9,7 +9,7 @@ const ChartHeader = () => {
 	return (
 		<div className="fr chart-header">
 			<div>
-				<h2>{charList[state.selectedChart].name}</h2>
+				<h3>{charList[state.selectedChart].name}</h3>
 			</div>
 			<div className="fr">
 				<button>Download</button>

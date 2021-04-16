@@ -3,13 +3,14 @@ $backgroundHover: #0e2c50;
 $backgroundClick: #7b58e4;
 
 .chart-selector {
-	width: 300px;
+	width: 100%;
 	display: flex;
 
 	padding: 10px;
-	padding-left: 55px;
-	padding-right: 55px;
-	justify-content: space-between;
+	padding-left: 0;
+	padding-right: 0;
+	justify-content: center;
+
 	align-items: center;
 	color: white;
 
@@ -41,12 +42,6 @@ $backgroundClick: #7b58e4;
 	border-radius: 50%;
 	box-shadow: black 1px 1px;
 	overflow: hidden;
-}
-.chart-selector-name {
-	display: flex;
-	text-align: center;
-	align-items: center;
 	justify-content: center;
-	justify-self: center;
-	height: 100%;
+	align-content: center;
 }
