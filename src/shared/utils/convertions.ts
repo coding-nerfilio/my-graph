@@ -8,7 +8,7 @@ export const textToArray = (input: string): Array<number> => {
 	for (let i = 0; i < input.length; i++) {
 		let val = input[i];
 		if (
-			(val === "," || val === "." || !isNaN(Number(val))) &&
+			(val === "," || val === "." || val === "-" || !isNaN(Number(val))) &&
 			!(val === "," && sanitizedInput[sanitizedInput.length - 1] === val)
 		) {
 			sanitizedInput += val;
@@ -41,7 +41,7 @@ export const sanitizeText = (input: string): string => {
 	let returnValue: string = "";
 	for (let i = 0; i < input.length; i++) {
 		let val = input[i];
-		if (val === "," || val === "." || !isNaN(Number(val))) {
+		if (val === "," || val === "." || val === "-" || !isNaN(Number(val))) {
 			returnValue += val;
 		}
 	}
