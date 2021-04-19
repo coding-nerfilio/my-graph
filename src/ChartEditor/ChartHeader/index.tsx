@@ -22,7 +22,6 @@ const ChartHeader = () => {
 				>
 					Save image
 				</Button>
-				<Button>Style</Button>
 			</div>
 		</div>
 	);

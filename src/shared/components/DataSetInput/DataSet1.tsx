@@ -1,4 +1,3 @@
-import React from "react";
 import { DataSet1 } from "../../../types/store";
 import Actions, { Action } from "../../store/actions";
 import DataSetInput from "./layout";

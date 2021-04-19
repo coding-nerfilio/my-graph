@@ -3,8 +3,6 @@ import { sanitizeText, textToArray } from "../../utils/convertions";
 import { randomColor } from "../../utils/randomColor";
 import { Action, EAction } from "../actions";
 
-//TODO RANDOM COLOR
-
 const Reducer = (state: State, action: Action): State => {
 	switch (action.type) {
 		case EAction.DATASET3_CLEAR:
