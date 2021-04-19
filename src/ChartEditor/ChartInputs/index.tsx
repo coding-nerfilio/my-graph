@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import Input from "../../shared/components/Input";
+
 import { Context } from "../../shared/store";
-import Actions, { Action } from "../../shared/store/actions";
-import Selectors from "../../shared/store/selectors";
+import { Action } from "../../shared/store/actions";
 import { State } from "../../types/store";
+import { BarPieInputs, PlotInputs } from "./setups";
 import "./style.scss";
 
 const ChartInputs = () => {
@@ -11,27 +11,16 @@ const ChartInputs = () => {
 		Context
 	);
 	return (
-		<div>
-			<Input
-				value={Selectors.chartData.text.x(state)}
-				onChange={(e: any) =>
-					dispatcher(Actions.chartData.setX(e.target.value))
-				}
-			/>
-			<Input
-				mt={10}
-				value={Selectors.chartData.text.y(state)}
-				onChange={(e: any) =>
-					dispatcher(Actions.chartData.setY(e.target.value))
-				}
-			/>
-			<Input
-				mt={10}
-				value={Selectors.chartData.text.z(state)}
-				onChange={(e: any) =>
-					dispatcher(Actions.chartData.setZ(e.target.value))
-				}
-			/>
+		<div className="chart-inputs">
+			{state.selectedChart === 0 && (
+				<PlotInputs state={state} dispatcher={dispatcher} />
+			)}
+			{state.selectedChart === 2 && (
+				<BarPieInputs state={state} dispatcher={dispatcher} />
+			)}
+			{state.selectedChart === 3 && (
+				<BarPieInputs state={state} dispatcher={dispatcher} />
+			)}
 		</div>
 	);
 };

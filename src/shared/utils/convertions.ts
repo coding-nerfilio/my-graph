@@ -36,3 +36,14 @@ export const arrayToText = (input: Array<any>) => {
 	}
 	return returnValue;
 };
+
+export const sanitizeText = (input: string): string => {
+	let returnValue: string = "";
+	for (let i = 0; i < input.length; i++) {
+		let val = input[i];
+		if (val === "," || val === "." || !isNaN(Number(val))) {
+			returnValue += val;
+		}
+	}
+	return returnValue;
+};

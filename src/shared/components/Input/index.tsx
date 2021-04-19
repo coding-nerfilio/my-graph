@@ -1,15 +1,17 @@
+import React from "react";
 import "./style.scss";
 
 interface props {
 	placeholder?: string;
 	value?: string;
-	onChange?: any;
+	onChange(e: React.ChangeEvent<HTMLInputElement>): any;
 	className?: any;
 	m?: number;
 	mr?: number;
 	ml?: number;
 	mb?: number;
 	mt?: number;
+	w?: string;
 }
 
 const Input = (props: props) => {
@@ -21,6 +23,7 @@ const Input = (props: props) => {
 				marginLeft: props.ml,
 				marginBottom: props.mb,
 				marginTop: props.mt,
+				width: props.w,
 			}}
 			className={"input "}
 			placeholder={props.placeholder}
