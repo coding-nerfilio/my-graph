@@ -9,26 +9,23 @@ const useSelectChart = () => {
 	const [state] = useContext<[State]>(Context);
 
 	useEffect(() => {
-		const select = async () => {
-			switch (state.selectedChart) {
-				case 0:
-					setChart(<Line data={ChartAdapters.Line(state.dataSet1)} />);
-					break;
-				case 1:
-					setChart(<Scatter data={ChartAdapters.ScatterPlot} />);
-					break;
-				case 2:
-					setChart(<Bar data={ChartAdapters.Bar(state.dataSet2)} />);
-					break;
-				case 3:
-					setChart(<Pie data={ChartAdapters.Pie(state.dataSet2)} />);
-					break;
-				case 4:
-					setChart(<Bar data={ChartAdapters.Histogram} />);
-					break;
-			}
-		};
-		select();
+		switch (state.selectedChart) {
+			case 0:
+				setChart(<Line data={ChartAdapters.Line(state.dataSet1)} />);
+				break;
+			case 1:
+				setChart(<Scatter data={ChartAdapters.ScatterPlot} />);
+				break;
+			case 2:
+				setChart(<Bar data={ChartAdapters.Bar(state.dataSet2)} />);
+				break;
+			case 3:
+				setChart(<Pie data={ChartAdapters.Pie(state.dataSet2)} />);
+				break;
+			case 4:
+				setChart(<Bar data={ChartAdapters.Histogram} />);
+				break;
+		}
 	}, [state.selectedChart, state.dataSet1, state.dataSet2, state.dataSet3]);
 
 	return chart;
