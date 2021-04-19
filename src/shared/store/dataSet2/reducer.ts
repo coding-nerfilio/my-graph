@@ -39,8 +39,8 @@ const Reducer = (state: State, action: Action): State => {
 			};
 			return { ...state, dataSet2: clone };
 		case EAction.DATASET2_SET_VALUE:
-			//Pie chart does not accept negative values
-			if (state.selectedChart === 3) {
+			//Pie/Doughnut chart does not accept negative values
+			if (state.selectedChart === 3 || state.selectedChart === 4) {
 				if (action.payload.data.includes("-")) {
 					return state;
 				}

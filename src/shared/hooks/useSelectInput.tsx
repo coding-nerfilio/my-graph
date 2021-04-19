@@ -17,10 +17,8 @@ const useSelectInput = () => {
 				break;
 			case 2:
 			case 3:
-				setInput(<BarPieInputs />);
-				break;
 			case 4:
-				setInput(<></>);
+				setInput(<BarPieInputs />);
 				break;
 		}
 	}, [state.selectedChart]);

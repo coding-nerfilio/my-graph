@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { State } from "../../types/store";
 import { Context } from "../store";
-import { Line, Scatter, Pie, Bar } from "react-chartjs-2";
+import { Line, Scatter, Pie, Bar, Doughnut } from "react-chartjs-2";
 import ChartAdapters from "../utils/chartAdapters";
 
 const useSelectChart = () => {
@@ -23,7 +23,7 @@ const useSelectChart = () => {
 				setChart(<Pie data={ChartAdapters.Pie(state.dataSet2)} />);
 				break;
 			case 4:
-				setChart(<Bar data={ChartAdapters.Histogram} />);
+				setChart(<Doughnut data={ChartAdapters.Doughnut(state.dataSet2)} />);
 				break;
 		}
 	}, [state.selectedChart, state.dataSet1, state.dataSet2, state.dataSet3]);
