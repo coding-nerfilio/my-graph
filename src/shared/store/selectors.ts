@@ -1,7 +1,3 @@
-import { chartData } from "./chartData/selectors";
-
-const Selectors = {
-	chartData,
-};
+const Selectors = {};
 
 export default Selectors;
