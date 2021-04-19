@@ -1,5 +1,5 @@
 interface chart {
-	icon: "Bar" | "Histogram" | "Pie" | "Plot" | "ScatterPlot";
+	icon: "Bar" | "Histogram" | "Pie" | "Plot" | "ScatterPlot" | "Doughnut";
 	name: string;
 }
 
@@ -8,7 +8,7 @@ const charList: Array<chart> = [
 	{ icon: "ScatterPlot", name: "Scatter Plot" },
 	{ icon: "Bar", name: "Bar chart" },
 	{ icon: "Pie", name: "Pie Chart" },
-	{ icon: "Histogram", name: "Histogram" },
+	{ icon: "Doughnut", name: "Doughnut" },
 ];
 
 export default charList;

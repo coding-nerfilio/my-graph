@@ -33,6 +33,10 @@ const Icon = (props: { name: string }) => {
 							.default
 					);
 					break;
+				case "Doughnut":
+					setIcon(
+						await (await import("../../../assets/images/Doughnut.svg")).default
+					);
 			}
 		};
 		dinamicImport();
