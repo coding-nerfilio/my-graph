@@ -1,6 +1,6 @@
-@import "../../../assets/sass/colors.scss";
+@import "./colors.scss";
 
-.dataset-input-1 {
+.dataset-input {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -12,7 +12,7 @@
 	margin-top: 10px;
 }
 
-.dataset-input-1-inner-left {
+.dataset-input-inner-left {
 	display: flex;
 	flex-direction: column;
 	padding: 5px;
@@ -22,7 +22,7 @@
 	height: 100%;
 }
 
-.dataset-input-1-inner-right {
+.dataset-input-inner-right {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
