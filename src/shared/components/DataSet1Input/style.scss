@@ -1,0 +1,10 @@
+@import "../../../assets/sass/colors.scss";
+
+.dataset-input-1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px;
+	background-color: $chart-dataset-input-background-color;
+	border-radius: 6px;
+}
