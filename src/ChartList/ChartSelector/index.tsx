@@ -6,7 +6,7 @@ import { State } from "../../types/store";
 import "./style.scss";
 
 const ChartSelector = (props: {
-	children: any;
+	icon: JSX.Element;
 	name: string;
 	index: number;
 }) => {
@@ -25,7 +25,7 @@ const ChartSelector = (props: {
 					: "chart-selector"
 			}
 		>
-			<div className="chart-selector-icon">{props.children}</div>
+			<div className="chart-selector-icon">{props.icon}</div>
 		</div>
 	);
 };
