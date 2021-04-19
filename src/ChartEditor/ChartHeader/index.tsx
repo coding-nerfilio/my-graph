@@ -1,6 +1,8 @@
 import { useContext } from "react";
+import Button from "../../shared/components/Button";
 import charList from "../../shared/constants/chartsList";
 import { Context } from "../../shared/store";
+import { DonwloadCanvas } from "../../shared/utils/downloadCanvas";
 import { State } from "../../types/store";
 import "./style.scss";
 const ChartHeader = () => {
@@ -12,9 +14,15 @@ const ChartHeader = () => {
 				<h3>{charList[state.selectedChart].name}</h3>
 			</div>
 			<div className="fr">
-				<button>Download</button>
-
-				<button>Style</button>
+				<Button
+					mr={10}
+					onClick={() => {
+						DonwloadCanvas();
+					}}
+				>
+					Save image
+				</Button>
+				<Button>Style</Button>
 			</div>
 		</div>
 	);

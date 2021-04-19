@@ -1,0 +1,18 @@
+@import "../../../assets/sass/colors.scss";
+
+.input {
+	border: 0px;
+	border-bottom: 3px solid white;
+	transition: 0.5s;
+	padding: 5px;
+	background-color: $input-background-color;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	color: white;
+	outline: none;
+	display: flex;
+}
+
+.input:focus {
+	border-bottom: 3px solid $click-background-color;
+}

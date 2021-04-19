@@ -1,13 +1,57 @@
+import { randomColor } from "../shared/utils/randomColor";
+
+export type DataSet = {
+	label: string;
+	raw: string;
+	array: Array<number>;
+};
+
+export type DataSet1 = {
+	label: string;
+	raw: string;
+	array: Array<number>;
+	color: string;
+};
+
+export type DataSet2 = {
+	label: string;
+	value: number;
+	color: string;
+};
+
+export type DataSet3 = {
+	label: string;
+	raw: string;
+	array: Array<number>;
+	color: string;
+};
+
 export type State = {
 	selectedChart: number;
 	chartStyle: number;
-	chartLabels: { x: string; y: string };
-	chartData: { x: Array<number>; y: Array<number>; z: Array<number> };
+
+	dataSet1: Array<DataSet1>;
+	dataSet2: Array<DataSet2>;
+	dataSet3: DataSet3;
+};
+
+export const defaultData = {
+	dataSet1: [{ label: "X", color: randomColor(), raw: "", array: [] }],
+	dataSet2: [{ label: "X", color: randomColor(), value: 100 }],
+	dataSet3: {
+		label: "X",
+		raw: "",
+		array: [],
+		color: randomColor(),
+	},
 };
 
 export const initialState: State = {
-	selectedChart: 1,
-	chartData: { x: [], y: [], z: [] },
+	selectedChart: 0,
+
 	chartStyle: 0,
-	chartLabels: { x: "X", y: "Y" },
+
+	dataSet1: defaultData.dataSet1,
+	dataSet2: defaultData.dataSet2,
+	dataSet3: defaultData.dataSet3,
 };

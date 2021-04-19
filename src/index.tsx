@@ -3,19 +3,16 @@ import ReactDOM from "react-dom";
 
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import ChartList from "./ChartList";
-import ChartEditor from "./ChartEditor";
+
 import Store from "./shared/store";
 
 import "./assets/sass/flex.scss";
+import App from "./app";
 
 ReactDOM.render(
 	<React.StrictMode>
 		<Store>
-			<div className="fr">
-				<ChartList />
-				<ChartEditor />
-			</div>
+			<App />
 		</Store>
 	</React.StrictMode>,
 	document.getElementById("root")

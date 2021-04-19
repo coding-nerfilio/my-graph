@@ -1,6 +1,4 @@
-$backgroundDefault: #1c0d11c3;
-$backgroundHover: #0e2c50;
-$backgroundClick: #7b58e4;
+@import "../../assets/sass/colors.scss";
 
 .chart-selector {
 	width: 100%;
@@ -19,7 +17,7 @@ $backgroundClick: #7b58e4;
 }
 
 .chart-selector-selected {
-	background-color: $backgroundClick;
+	background-color: $click-background-color;
 }
 
 .chart-selector:first-child {
@@ -27,11 +25,11 @@ $backgroundClick: #7b58e4;
 }
 
 .chart-selector:hover {
-	background-color: $backgroundHover;
+	background-color: $hover-background-color;
 }
 
 .chart-selector:active {
-	background-color: $backgroundClick;
+	background-color: $click-background-color;
 }
 
 .chart-selector-icon {

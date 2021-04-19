@@ -1,4 +1,4 @@
-import { State } from "../../../types/store";
+import { defaultData, State } from "../../../types/store";
 import { Action, EAction } from "../actions";
 
 const Reducer = (state: State, action: Action): State => {
@@ -7,6 +7,9 @@ const Reducer = (state: State, action: Action): State => {
 			return {
 				...state,
 				selectedChart: action.payload,
+				dataSet1: defaultData.dataSet1,
+				dataSet2: defaultData.dataSet2,
+				dataSet3: defaultData.dataSet3,
 			};
 		default:
 			return state;
