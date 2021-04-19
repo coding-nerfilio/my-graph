@@ -13,7 +13,9 @@ export const PlotInputs = () => {
 	);
 	return (
 		<>
-			<Button onClick={() => dispatcher(Actions.dataSet1.add())}>Add</Button>
+			<Button onClick={() => dispatcher(Actions.dataSet1.add())}>
+				Add dataset
+			</Button>
 			{state.dataSet1.map((dataset, index) => (
 				<DataSet1Input data={dataset} dispatcher={dispatcher} index={index} />
 			))}
@@ -27,7 +29,9 @@ export const BarPieInputs = () => {
 	);
 	return (
 		<>
-			<Button onClick={() => dispatcher(Actions.dataSet2.add())}>Add</Button>
+			<Button onClick={() => dispatcher(Actions.dataSet2.add())}>
+				Add dataset
+			</Button>
 			{state.dataSet2.map((dataset, index) => (
 				<DataSet2Input data={dataset} index={index} dispatcher={dispatcher} />
 			))}

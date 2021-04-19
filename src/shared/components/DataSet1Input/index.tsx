@@ -4,6 +4,7 @@ import Actions, { Action } from "../../store/actions";
 import Button from "../Button";
 import ColorPicker from "../ColorPicker";
 import EditableText from "../EditableText";
+import Icon from "../Icon";
 import Input from "../Input";
 import "./style.scss";
 
@@ -32,16 +33,23 @@ const DataSet1Input = (props: props) => {
 
 	return (
 		<div className="dataset-input-1">
-			<EditableText value={props.data.label} onChange={handleChangeLabel} />
-			<div>
-				<div>Values:</div>
-				<Input value={props.data.raw} onChange={handleOnChangeRawInput} />
+			<div className="dataset-input-1-inner-left">
+				<EditableText value={props.data.label} onChange={handleChangeLabel} />
+				<Input
+					value={props.data.raw}
+					onChange={handleOnChangeRawInput}
+					placeholder="value1, value2, value3 ..."
+				/>
 			</div>
-			<ColorPicker
-				value={props.data.color}
-				handleOnChangeColor={handleOnChangeColor}
-			/>
-			<Button onClick={handleDeleteDataset}>Delete</Button>
+			<div className="dataset-input-1-inner-right">
+				<ColorPicker
+					value={props.data.color}
+					handleOnChangeColor={handleOnChangeColor}
+				/>
+				<Button onClick={handleDeleteDataset}>
+					<Icon name="Delete" />
+				</Button>
+			</div>
 		</div>
 	);
 };

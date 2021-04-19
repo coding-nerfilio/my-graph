@@ -37,6 +37,27 @@ const Icon = (props: { name: string }) => {
 					setIcon(
 						await (await import("../../../assets/images/Doughnut.svg")).default
 					);
+					break;
+				case "Cross":
+					setIcon(
+						await (await import("../../../assets/images/Cross.svg")).default
+					);
+					break;
+				case "Tick":
+					setIcon(
+						await (await import("../../../assets/images/Tick.svg")).default
+					);
+					break;
+				case "Delete":
+					setIcon(
+						await (await import("../../../assets/images/Delete.svg")).default
+					);
+					break;
+				case "Edit":
+					setIcon(
+						await (await import("../../../assets/images/Edit.svg")).default
+					);
+					break;
 			}
 		};
 		dinamicImport();
