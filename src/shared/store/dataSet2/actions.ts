@@ -11,7 +11,7 @@ export const dataSet2 = {
 		type: EAction.DATASET2_SET_LABEL,
 		payload: { index, data },
 	}),
-	setValue: (index: number, data: number): Action => ({
+	setValue: (index: number, data: string): Action => ({
 		type: EAction.DATASET2_SET_VALUE,
 		payload: { index, data },
 	}),

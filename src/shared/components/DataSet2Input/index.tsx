@@ -28,7 +28,7 @@ const DataSet2Input = (props: props) => {
 				break;
 			case "VALUE":
 				props.dispatcher(
-					Actions.dataSet2.setValue(props.index, Number(e.target.value))
+					Actions.dataSet2.setValue(props.index, e.target.value)
 				);
 		}
 	};

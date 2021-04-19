@@ -50,7 +50,7 @@ export type Action =
 	| { type: EAction.DATASET2_ADD; payload: null }
 	| { type: EAction.DATASET2_REMOVE; payload: number }
 	| { type: EAction.DATASET2_SET_LABEL; payload: IndexedPayload<string> }
-	| { type: EAction.DATASET2_SET_VALUE; payload: IndexedPayload<number> }
+	| { type: EAction.DATASET2_SET_VALUE; payload: IndexedPayload<string> }
 	| { type: EAction.DATASET2_SET_COLOR; payload: IndexedPayload<string> }
 	| { type: EAction.DATASET3_CLEAR; payload: null }
 	| { type: EAction.DATASET3_SET_LABEL; payload: string }

@@ -39,9 +39,15 @@ const Reducer = (state: State, action: Action): State => {
 			};
 			return { ...state, dataSet2: clone };
 		case EAction.DATASET2_SET_VALUE:
+			//Pie chart does not accept negative values
+			if (state.selectedChart === 3) {
+				if (action.payload.data.includes("-")) {
+					return state;
+				}
+			}
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
-				value: action.payload.data,
+				value: Number(action.payload.data),
 			};
 			return { ...state, dataSet2: clone };
 		case EAction.DATASET2_SET_COLOR:
