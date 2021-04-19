@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "../components/Modal/index";
 
 const useModal = (content: JSX.Element, title: string) => {
@@ -12,15 +12,12 @@ const useModal = (content: JSX.Element, title: string) => {
 		setIsOpen(false);
 	};
 
-	const [modal, setModal] = useState(
-		ModalWrapper(content, isOpen, closeModal, title)
-	);
-
-	useEffect(() => {
-		setModal(ModalWrapper(content, isOpen, closeModal, title));
-	}, [content, isOpen, title]);
-
-	return { isOpen, openModal, closeModal, Modal: modal };
+	return {
+		isOpen,
+		openModal,
+		closeModal,
+		Modal: ModalWrapper(content, isOpen, closeModal, title),
+	};
 };
 
 export default useModal;
