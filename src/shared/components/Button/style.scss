@@ -13,16 +13,14 @@
 	box-shadow: 1px 1px black;
 	width: fit-content;
 	height: fit-content;
+	max-height: fit-content;
 	transition: 0.5s;
 }
 
 .button:hover {
-	transform: scale(1.1);
 	background-color: $hover-background-color;
 }
 
 .button:active {
-	transition: 0.2s;
-	transform: scale(0.7);
 	background-color: $click-background-color;
 }
