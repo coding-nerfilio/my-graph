@@ -1,11 +1,28 @@
 .editable-text-idle {
 	display: flex;
 	align-items: center;
-	width: 20%;
+	width: 100%;
+	justify-content: space-between;
 }
 
 .editable-text-editing {
 	display: flex;
 	align-items: center;
-	width: 20%;
+	width: 100%;
+	max-width: 100%;
+}
+
+.editable-text-editing-left {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-right: 10px;
+}
+
+.editable-text-editing-right {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: fit-content;
+	margin-right: 5px;
 }

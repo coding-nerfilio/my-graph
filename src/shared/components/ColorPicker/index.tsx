@@ -26,8 +26,9 @@ const ColorPicker = (props: props) => {
 			<Button onClick={openModal}>
 				<div
 					style={{
-						width: 16,
-						height: 16,
+						border: "1px solid white",
+						width: 15,
+						height: 15,
 						backgroundColor: props.value,
 					}}
 				/>

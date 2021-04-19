@@ -4,7 +4,33 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 5px;
+
 	background-color: $chart-dataset-input-background-color;
 	border-radius: 6px;
+	height: 100px;
+	width: 100%;
+	margin-top: 10px;
+}
+
+.dataset-input-1-inner-left {
+	display: flex;
+	flex-direction: column;
+	padding: 5px;
+	padding-left: 10px;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 100%;
+}
+
+.dataset-input-1-inner-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	width: 50px;
+	background-color: $chart-dataset-input-background-color2;
+	padding-left: 10px;
+	padding-right: 5px;
+	height: 100%;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
 }
