@@ -18,7 +18,7 @@ export const adapter3 = (input: Array<DataSet2>): adapterType => {
 	const colors: Array<string> = [];
 	input.forEach((dataset) => {
 		labels.push(dataset.label);
-		data.push(dataset.value);
+		data.push(dataset.raw);
 		colors.push(dataset.color);
 	});
 

@@ -20,7 +20,7 @@ const Reducer = (state: State, action: Action): State => {
 					...state.dataSet2,
 					{
 						label: newLabel(state.dataSet2.length),
-						value: 0,
+						raw: 0,
 						color: randomColor(),
 					},
 				],
@@ -47,7 +47,7 @@ const Reducer = (state: State, action: Action): State => {
 			}
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
-				value: Number(action.payload.data),
+				raw: Number(action.payload.data),
 			};
 			return { ...state, dataSet2: clone };
 		case EAction.DATASET2_SET_COLOR:

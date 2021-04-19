@@ -15,7 +15,7 @@ export type DataSet1 = {
 
 export type DataSet2 = {
 	label: string;
-	value: number;
+	raw: number;
 	color: string;
 };
 
@@ -37,7 +37,7 @@ export type State = {
 
 export const defaultData = {
 	dataSet1: [{ label: "X", color: randomColor(), raw: "", array: [] }],
-	dataSet2: [{ label: "X", color: randomColor(), value: 100 }],
+	dataSet2: [{ label: "X", color: randomColor(), raw: 100 }],
 	dataSet3: {
 		label: "X",
 		raw: "",

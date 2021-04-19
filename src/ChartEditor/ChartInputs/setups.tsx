@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Button from "../../shared/components/Button";
-import DataSet1Input from "../../shared/components/DataSet1Input";
-import DataSet2Input from "../../shared/components/DataSet2Input";
+import DataSet1Input from "../../shared/components/DataSetInput/DataSet1";
+import DataSet2Input from "../../shared/components/DataSetInput/DataSet2";
 import { Context } from "../../shared/store";
 
 import Actions, { Action } from "../../shared/store/actions";
