@@ -6,6 +6,7 @@ import chartStyle from "./chartStyle/reducer";
 import dataSet1 from "./dataSet1/reducer";
 import dataSet2 from "./dataSet2/reducer";
 import dataSet3 from "./dataSet3/reducer";
+import dataSet4 from "./dataSet4/reducer";
 
 const RootReducer = (state: State, action: Action): State => {
 	switch (action.type) {
@@ -36,6 +37,14 @@ const RootReducer = (state: State, action: Action): State => {
 		case EAction.DATASET3_SET_RAW:
 		case EAction.DATASET3_SET_COLOR:
 			return dataSet3(state, action);
+
+		case EAction.DATASET4_ADD:
+		case EAction.DATASET4_CLEAR:
+		case EAction.DATASET4_SET_LABEL:
+		case EAction.DATASET4_SET_RAWX:
+		case EAction.DATASET4_SET_RAWY:
+		case EAction.DATASET4_SET_COLOR:
+			return dataSet4(state, action);
 
 		default:
 			return state;

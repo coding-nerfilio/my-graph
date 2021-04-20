@@ -1,5 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { BarPieInputs, PlotInputs } from "../../ChartEditor/ChartInputs/setups";
+import {
+	BarPieInputs,
+	PlotInputs,
+	ScatterInputs,
+} from "../../ChartEditor/ChartInputs/setups";
 import { State } from "../../types/store";
 import { Context } from "../store";
 
@@ -13,7 +17,7 @@ const useSelectInput = () => {
 				setInput(<PlotInputs />);
 				break;
 			case 1:
-				setInput(<></>);
+				setInput(<ScatterInputs />);
 				break;
 			case 2:
 			case 3:
