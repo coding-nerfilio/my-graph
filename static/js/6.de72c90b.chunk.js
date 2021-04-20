@@ -1,0 +1,2 @@
+(this["webpackJsonpmy-graph"]=this["webpackJsonpmy-graph"]||[]).push([[6],{227:function(s,t,p){"use strict";p.r(t),t.default=p.p+"static/media/Doughnut.bb470885.svg"}}]);
+//# sourceMappingURL=6.de72c90b.chunk.js.map
