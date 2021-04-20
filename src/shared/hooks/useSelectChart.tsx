@@ -17,7 +17,24 @@ const useSelectChart = () => {
 				setChart(<Scatter data={ChartAdapters.ScatterPlot} />);
 				break;
 			case 2:
-				setChart(<Bar data={ChartAdapters.Bar(state.dataSet2)} />);
+				setChart(
+					<Bar
+						data={ChartAdapters.Bar.adapter(state.dataSet2)}
+						options={{
+							scales: {
+								yAxes: [
+									{
+										type: "linear",
+										ticks: ChartAdapters.Bar.scale(state.dataSet2),
+									},
+								],
+							},
+							legend: {
+								display: false,
+							},
+						}}
+					/>
+				);
 				break;
 			case 3:
 				setChart(<Pie data={ChartAdapters.Pie(state.dataSet2)} />);

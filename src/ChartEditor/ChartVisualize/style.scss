@@ -4,6 +4,28 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
+	background-color: white;
 	border-radius: 12px;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	.chart-visualize {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.chart-visualize {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.chart-visualize {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
 }

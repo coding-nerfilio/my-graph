@@ -3,8 +3,6 @@ import { newLabel } from "../../utils/newLabel";
 import { randomColor } from "../../utils/randomColor";
 import { Action, EAction } from "../actions";
 
-//TODO RANDOM COLOR
-
 const Reducer = (state: State, action: Action): State => {
 	let clone = [...state.dataSet2];
 	switch (action.type) {
