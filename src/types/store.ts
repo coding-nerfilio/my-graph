@@ -1,3 +1,4 @@
+import { RandomDataset } from "../shared/utils/exampleData";
 import { randomColor } from "../shared/utils/randomColor";
 
 export type DataSet = {
@@ -45,34 +46,18 @@ export type State = {
 	dataSet4: Array<DataSet4>;
 };
 
-export const defaultData = {
-	dataSet1: [{ label: "X", color: randomColor(), raw: "", array: [] }],
-	dataSet2: [{ label: "X", color: randomColor(), raw: 100 }],
+export const initialState: State = {
+	selectedChart: 0,
+
+	chartStyle: 0,
+
+	dataSet1: RandomDataset(1) as DataSet1[],
+	dataSet2: RandomDataset(2) as DataSet2[],
 	dataSet3: {
 		label: "X",
 		raw: "",
 		array: [],
 		color: randomColor(),
 	},
-	dataSet4: [
-		{
-			label: "Example points",
-			rawX: "5,10,6",
-			rawY: "65,42,34",
-			arrayX: [5, 10, 6],
-			arrayY: [65, 42, 34],
-			color: randomColor(),
-		},
-	],
-};
-
-export const initialState: State = {
-	selectedChart: 0,
-
-	chartStyle: 0,
-
-	dataSet1: defaultData.dataSet1,
-	dataSet2: defaultData.dataSet2,
-	dataSet3: defaultData.dataSet3,
-	dataSet4: defaultData.dataSet4,
+	dataSet4: RandomDataset(4) as DataSet4[],
 };

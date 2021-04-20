@@ -1,4 +1,5 @@
-import { defaultData, State } from "../../../types/store";
+import { DataSet2, DataSet1, DataSet4, State } from "../../../types/store";
+import { RandomDataset } from "../../utils/exampleData";
 import { Action, EAction } from "../actions";
 
 const Reducer = (state: State, action: Action): State => {
@@ -7,10 +8,10 @@ const Reducer = (state: State, action: Action): State => {
 			return {
 				...state,
 				selectedChart: action.payload,
-				dataSet1: defaultData.dataSet1,
-				dataSet2: defaultData.dataSet2,
-				dataSet3: defaultData.dataSet3,
-				dataSet4: defaultData.dataSet4,
+				dataSet1: RandomDataset(1) as DataSet1[],
+				dataSet2: RandomDataset(2) as DataSet2[],
+				//dataSet3: defaultData.dataSet3,
+				dataSet4: RandomDataset(4) as DataSet4[],
 			};
 		default:
 			return state;
