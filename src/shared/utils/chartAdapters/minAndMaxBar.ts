@@ -14,8 +14,8 @@ export const minAndMaxBar = (input: DataSet2[]) => {
 	});
 
 	return {
-		min: min - min / 5,
-		max: max + max / 5,
-		stepSize: max / 10,
+		min: Math.floor(min - min / 5),
+		max: Math.floor(max + max / 5),
+		stepSize: Math.floor(max / 10),
 	};
 };
