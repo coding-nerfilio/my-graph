@@ -1,6 +1,8 @@
 import { DataSet1 } from "../../../types/store";
 import Actions, { Action } from "../../store/actions";
-import DataSetInput from "./layout";
+import { DataSetInputLeftSide1 } from "./layouts/LeftSide1";
+import { DataSetInputRightSide } from "./layouts/RightSide1";
+import Container from "./layouts/Container";
 
 interface props {
 	data: DataSet1;
@@ -26,13 +28,18 @@ const DataSet1Input = (props: props) => {
 	};
 
 	return (
-		<DataSetInput
-			data={props.data}
-			handleOnChangeColor={handleOnChangeColor}
-			handleOnChangeLabel={handleOnChangeLabel}
-			handleOnChangeInput={handleOnChangeInput}
-			handleOnDeleteDataset={handleOnDeleteDataset}
-		/>
+		<Container>
+			<DataSetInputLeftSide1
+				data={props.data}
+				handleOnChangeInput={handleOnChangeInput}
+				handleOnChangeLabel={handleOnChangeLabel}
+			/>
+			<DataSetInputRightSide
+				data={props.data}
+				handleOnChangeColor={handleOnChangeColor}
+				handleOnDeleteDataset={handleOnDeleteDataset}
+			/>
+		</Container>
 	);
 };
 export default DataSet1Input;
