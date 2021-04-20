@@ -18,6 +18,6 @@
 <ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 357.5 281)" fill="#FF0000"/>
 <ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 315.5 299)" fill="#FF0000"/>
 <ellipse rx="8.5" ry="9" transform="matrix(-1 0 0 1 349.5 252)" fill="#FF0000"/>
-<line x1="123" y1="376" x2="404" y2="376" stroke="black" stroke-width="16"/>
-<line x1="134.995" y1="102.207" x2="130.739" y2="383.138" stroke="black" stroke-width="16"/>
+<line x1="125" y1="376" x2="406" y2="376" stroke="black" stroke-width="16"/>
+<line x1="132.868" y1="102.07" x2="132.868" y2="383.033" stroke="black" stroke-width="16"/>
 </svg>
