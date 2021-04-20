@@ -26,6 +26,15 @@ export type DataSet3 = {
 	color: string;
 };
 
+export type DataSet4 = {
+	label: string;
+	rawX: string;
+	rawY: string;
+	arrayX: Array<number>;
+	arrayY: Array<number>;
+	color: string;
+};
+
 export type State = {
 	selectedChart: number;
 	chartStyle: number;
@@ -33,6 +42,7 @@ export type State = {
 	dataSet1: Array<DataSet1>;
 	dataSet2: Array<DataSet2>;
 	dataSet3: DataSet3;
+	dataSet4: Array<DataSet4>;
 };
 
 export const defaultData = {
@@ -44,6 +54,16 @@ export const defaultData = {
 		array: [],
 		color: randomColor(),
 	},
+	dataSet4: [
+		{
+			label: "Example points",
+			rawX: "5,10,6",
+			rawY: "65,42,34",
+			arrayX: [5, 10, 6],
+			arrayY: [65, 42, 34],
+			color: randomColor(),
+		},
+	],
 };
 
 export const initialState: State = {
@@ -54,4 +74,5 @@ export const initialState: State = {
 	dataSet1: defaultData.dataSet1,
 	dataSet2: defaultData.dataSet2,
 	dataSet3: defaultData.dataSet3,
+	dataSet4: defaultData.dataSet4,
 };
