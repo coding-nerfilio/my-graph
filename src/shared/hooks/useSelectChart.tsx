@@ -29,7 +29,9 @@ const useSelectChart = () => {
 									},
 								],
 							},
-							plugings: {},
+							legend: {
+								display: false,
+							},
 						}}
 					/>
 				);
