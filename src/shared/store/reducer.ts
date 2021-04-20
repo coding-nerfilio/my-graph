@@ -40,6 +40,7 @@ const RootReducer = (state: State, action: Action): State => {
 
 		case EAction.DATASET4_ADD:
 		case EAction.DATASET4_CLEAR:
+		case EAction.DATASET4_REMOVE:
 		case EAction.DATASET4_SET_LABEL:
 		case EAction.DATASET4_SET_RAWX:
 		case EAction.DATASET4_SET_RAWY:
