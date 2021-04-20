@@ -38,6 +38,7 @@ const RootReducer = (state: State, action: Action): State => {
 		case EAction.DATASET3_SET_COLOR:
 			return dataSet3(state, action);
 
+		case EAction.DATASET4_ADD:
 		case EAction.DATASET4_CLEAR:
 		case EAction.DATASET4_SET_LABEL:
 		case EAction.DATASET4_SET_RAWX:

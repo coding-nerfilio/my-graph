@@ -18,7 +18,7 @@ const Reducer = (state: State, action: Action): State => {
 				dataSet4: [
 					...state.dataSet4,
 					{
-						label: newLabel(state.dataSet1.length),
+						label: newLabel(state.dataSet4.length),
 						rawX: "",
 						rawY: "",
 						arrayX: [],
