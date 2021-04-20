@@ -10,6 +10,7 @@ const Reducer = (state: State, action: Action): State => {
 				dataSet1: defaultData.dataSet1,
 				dataSet2: defaultData.dataSet2,
 				dataSet3: defaultData.dataSet3,
+				dataSet4: defaultData.dataSet4,
 			};
 		default:
 			return state;
