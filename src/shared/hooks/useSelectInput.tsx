@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import {
 	BarPieInputs,
+	HistogramInputs,
 	PlotInputs,
 	ScatterInputs,
 } from "../../ChartEditor/ChartInputs/setups";
@@ -22,8 +23,11 @@ const useSelectInput = () => {
 			case 2:
 			case 3:
 			case 4:
+			case 7:
 				setInput(<BarPieInputs />);
 				break;
+			case 5:
+				setInput(<HistogramInputs />);
 		}
 	}, [state.selectedChart]);
 
