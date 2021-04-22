@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { icon } from "../../../types/icons";
 import "./style.scss";
 
-const Icon = (props: { name: string }) => {
+const Icon = (props: { name: icon }) => {
 	const [icon, setIcon] = useState<any>(null);
 
 	useEffect(() => {
@@ -56,6 +57,16 @@ const Icon = (props: { name: string }) => {
 				case "Edit":
 					setIcon(
 						await (await import("../../../assets/images/Edit.svg")).default
+					);
+					break;
+				case "Polar":
+					setIcon(
+						await (await import("../../../assets/images/Polar.svg")).default
+					);
+					break;
+				case "Radar":
+					setIcon(
+						await (await import("../../../assets/images/Radar.svg")).default
 					);
 					break;
 			}
