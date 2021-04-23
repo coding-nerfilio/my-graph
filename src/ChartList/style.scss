@@ -5,6 +5,8 @@
 	flex-direction: column;
 	height: 100vh;
 	background-color: $unselected-background-color;
+	overflow: hidden;
+	overflow-y: auto;
 }
 @media only screen and (max-width: 600px) {
 	.chart-list {

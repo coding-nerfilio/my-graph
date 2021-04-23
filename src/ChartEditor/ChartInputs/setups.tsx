@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Button from "../../shared/components/Button";
 import DataSet1Input from "../../shared/components/DataSetInput/DataSet1";
 import DataSet2Input from "../../shared/components/DataSetInput/DataSet2";
+import DataSet3Input from "../../shared/components/DataSetInput/DataSet3";
 import DataSet4Input from "../../shared/components/DataSetInput/DataSet4";
 import { Context } from "../../shared/store";
 
@@ -52,6 +53,17 @@ export const BarPieInputs = () => {
 			{state.dataSet2.map((dataset, index) => (
 				<DataSet2Input data={dataset} index={index} dispatcher={dispatcher} />
 			))}
+		</>
+	);
+};
+
+export const HistogramInputs = () => {
+	const [state, dispatcher] = useContext<[State, (action: Action) => {}]>(
+		Context
+	);
+	return (
+		<>
+			<DataSet3Input dispatcher={dispatcher} data={state.dataSet3} />
 		</>
 	);
 };

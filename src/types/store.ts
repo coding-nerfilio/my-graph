@@ -53,11 +53,6 @@ export const initialState: State = {
 
 	dataSet1: RandomDataset(1) as DataSet1[],
 	dataSet2: RandomDataset(2) as DataSet2[],
-	dataSet3: {
-		label: "X",
-		raw: "",
-		array: [],
-		color: randomColor(),
-	},
+	dataSet3: RandomDataset(3) as DataSet3,
 	dataSet4: RandomDataset(4) as DataSet4[],
 };
