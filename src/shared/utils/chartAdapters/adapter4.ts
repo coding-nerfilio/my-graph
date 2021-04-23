@@ -1,4 +1,4 @@
-import { DataSet4 } from "../../../types/store";
+import { DataSet4 } from "../../../types/dataset";
 
 type dataset = {
 	label: string;

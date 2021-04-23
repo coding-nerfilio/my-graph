@@ -1,4 +1,4 @@
-import { DataSet1, DataSet2, DataSet3, DataSet4 } from "../../types/store";
+import { DataSet1, DataSet2, DataSet3, DataSet4 } from "../../types/dataset";
 import { randomColor } from "./randomColor";
 
 const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {

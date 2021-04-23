@@ -5,9 +5,9 @@ import DataSet2Input from "../../shared/components/DataSetInput/DataSet2";
 import DataSet3Input from "../../shared/components/DataSetInput/DataSet3";
 import DataSet4Input from "../../shared/components/DataSetInput/DataSet4";
 import { Context } from "../../shared/store";
-
-import Actions, { Action } from "../../shared/store/actions";
-import { State } from "../../types/store";
+import Actions from "../../shared/store/actions";
+import { Action } from "../../types/store/actions";
+import { State } from "../../types/store/state";
 
 export const PlotInputs = () => {
 	const [state, dispatcher] = useContext<[State, (action: Action) => {}]>(

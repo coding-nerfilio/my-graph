@@ -5,7 +5,7 @@ import {
 	PlotInputs,
 	ScatterInputs,
 } from "../../ChartEditor/ChartInputs/setups";
-import { State } from "../../types/store";
+import { State } from "../../types/store/state";
 import { Context } from "../store";
 
 const useSelectInput = () => {

@@ -1,5 +1,6 @@
-import { DataSet2 } from "../../../types/store";
-import Actions, { Action } from "../../store/actions";
+import { DataSet2 } from "../../../types/dataset";
+import { Action } from "../../../types/store/actions";
+import Actions from "../../store/actions";
 import Container from "./layouts/Container";
 import { DataSetInputLeftSide1 } from "./layouts/LeftSide1";
 import { DataSetInputRightSide } from "./layouts/RightSide1";

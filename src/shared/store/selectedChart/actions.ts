@@ -1,4 +1,4 @@
-import { Action, EAction } from "../actions";
+import { Action, EAction } from "../../../types/store/actions";
 
 const selectedChart = {
 	set: (index: number): Action => ({

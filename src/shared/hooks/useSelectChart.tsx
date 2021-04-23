@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { State } from "../../types/store";
+
 import { Context } from "../store";
 import { Line, Scatter, Pie, Bar, Doughnut, Polar } from "react-chartjs-2";
 import ChartAdapters from "../utils/chartAdapters";
+import { State } from "../../types/store/state";
 
 const useSelectChart = () => {
 	const [chart, setChart] = useState(<></>);

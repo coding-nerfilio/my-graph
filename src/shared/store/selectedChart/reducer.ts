@@ -1,12 +1,7 @@
-import {
-	DataSet2,
-	DataSet1,
-	DataSet4,
-	State,
-	DataSet3,
-} from "../../../types/store";
+import { DataSet2, DataSet1, DataSet4, DataSet3 } from "../../../types/dataset";
+import { Action, EAction } from "../../../types/store/actions";
+import { State } from "../../../types/store/state";
 import { RandomDataset } from "../../utils/exampleData";
-import { Action, EAction } from "../actions";
 
 const Reducer = (state: State, action: Action): State => {
 	switch (action.type) {

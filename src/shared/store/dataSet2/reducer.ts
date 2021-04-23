@@ -1,7 +1,7 @@
-import { State } from "../../../types/store";
+import { Action, EAction } from "../../../types/store/actions";
+import { State } from "../../../types/store/state";
 import { newLabel } from "../../utils/newLabel";
 import { randomColor } from "../../utils/randomColor";
-import { Action, EAction } from "../actions";
 
 const Reducer = (state: State, action: Action): State => {
 	let clone = [...state.dataSet2];

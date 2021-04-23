@@ -1,8 +1,9 @@
-import { DataSet1 } from "../../../types/store";
-import Actions, { Action } from "../../store/actions";
 import { DataSetInputLeftSide1 } from "./layouts/LeftSide1";
 import { DataSetInputRightSide } from "./layouts/RightSide1";
 import Container from "./layouts/Container";
+import { DataSet1 } from "../../../types/dataset";
+import Actions from "../../store/actions";
+import { Action } from "../../../types/store/actions";
 
 interface props {
 	data: DataSet1;

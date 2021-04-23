@@ -3,7 +3,8 @@ import Button from "../../shared/components/Button";
 import charList from "../../shared/constants/chartsList";
 import { Context } from "../../shared/store";
 import { DonwloadCanvas } from "../../shared/utils/downloadCanvas";
-import { State } from "../../types/store";
+import { State } from "../../types/store/state";
+
 import "./style.scss";
 const ChartHeader = () => {
 	const [state] = useContext<[State]>(Context);

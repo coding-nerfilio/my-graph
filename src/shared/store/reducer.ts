@@ -1,12 +1,11 @@
-import { State } from "../../types/store";
-import { Action, EAction } from "./actions";
-
 import selectedChart from "./selectedChart/reducer";
 import chartStyle from "./chartStyle/reducer";
 import dataSet1 from "./dataSet1/reducer";
 import dataSet2 from "./dataSet2/reducer";
 import dataSet3 from "./dataSet3/reducer";
 import dataSet4 from "./dataSet4/reducer";
+import { State } from "../../types/store/state";
+import { Action, EAction } from "../../types/store/actions";
 
 const RootReducer = (state: State, action: Action): State => {
 	switch (action.type) {

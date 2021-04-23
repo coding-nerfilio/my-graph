@@ -1,4 +1,4 @@
-import { DataSet2 } from "../../../types/store";
+import { DataSet2 } from "../../../types/dataset";
 
 export const adapter3 = (input: Array<DataSet2>) => {
 	const labels: Array<string> = [];
