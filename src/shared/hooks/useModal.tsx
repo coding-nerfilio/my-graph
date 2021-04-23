@@ -16,7 +16,7 @@ const useModal = (content: JSX.Element, title: string) => {
 		isOpen,
 		openModal,
 		closeModal,
-		Modal: ModalWrapper(content, isOpen, closeModal, title),
+		Component: ModalWrapper(content, isOpen, closeModal, title),
 	};
 };
 

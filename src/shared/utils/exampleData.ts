@@ -1,4 +1,4 @@
-import { DataSet1, DataSet2, DataSet4 } from "../../types/store";
+import { DataSet1, DataSet2, DataSet3, DataSet4 } from "../../types/store";
 import { randomColor } from "./randomColor";
 
 const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {
@@ -14,8 +14,8 @@ const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {
 };
 
 export const RandomDataset = (
-	type: 1 | 2 | 4
-): DataSet1[] | DataSet2[] | DataSet4[] => {
+	type: 1 | 2 | 3 | 4
+): DataSet1[] | DataSet2[] | DataSet3 | DataSet4[] => {
 	switch (type) {
 		case 1:
 			let valueForDataset1 = genRandomNumbers(10);
@@ -38,6 +38,15 @@ export const RandomDataset = (
 				});
 			}
 			return dataset2;
+		case 3:
+			let valueForDataset3 = genRandomNumbers(20);
+			let dataset3: DataSet3 = {
+				color: randomColor(),
+				array: valueForDataset3.array,
+				raw: valueForDataset3.raw,
+				label: "Example",
+			};
+			return dataset3;
 		case 4:
 			let valueForDataset4 = {
 				x: genRandomNumbers(10),

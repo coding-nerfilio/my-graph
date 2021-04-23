@@ -16,14 +16,14 @@ const ColorPicker = (props: props) => {
 		props.handleOnChangeColor(color.hex);
 	};
 
-	const { openModal, Modal } = useModal(
+	const Modal = useModal(
 		<SketchPicker color={props.value} onChange={handleOnChange} />,
 		"Color picker"
 	);
 
 	return (
 		<>
-			<Button onClick={openModal}>
+			<Button onClick={Modal.openModal}>
 				<div
 					style={{
 						border: "1px solid white",
@@ -33,7 +33,7 @@ const ColorPicker = (props: props) => {
 					}}
 				/>
 			</Button>
-			{Modal}
+			{Modal.Component}
 		</>
 	);
 };

@@ -15,7 +15,7 @@ export const minAndMaxBar = (input: DataSet2[]) => {
 
 	return {
 		min: Math.floor(min - min / 5),
-		max: Math.floor(max + max / 5),
+		max: max + Math.floor(max / 10),
 		stepSize: Math.floor(max / 10),
 	};
 };

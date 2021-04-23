@@ -5,7 +5,7 @@ import "../../../../assets/sass/dataset-input.scss";
 
 interface IRightSideProps {
 	handleOnChangeColor: (color: string) => void;
-	handleOnDeleteDataset: () => void;
+	handleOnDeleteDataset?: () => void;
 	data: { color: string };
 }
 
@@ -16,9 +16,11 @@ export const DataSetInputRightSide = (props: IRightSideProps) => {
 				value={props.data.color}
 				handleOnChangeColor={props.handleOnChangeColor}
 			/>
-			<Button onClick={props.handleOnDeleteDataset}>
-				<Icon name="Delete" />
-			</Button>
+			{props.handleOnDeleteDataset && (
+				<Button onClick={props.handleOnDeleteDataset}>
+					<Icon name="Delete" />
+				</Button>
+			)}
 		</div>
 	);
 };

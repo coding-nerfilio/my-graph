@@ -43,27 +43,9 @@ const useSelectChart = () => {
 				setChart(<Doughnut data={ChartAdapters.Doughnut(state.dataSet2)} />);
 				break;
 			case 5:
+				let chartParameters = ChartAdapters.Histogram(state.dataSet3);
 				setChart(
-					<Bar
-						data={ChartAdapters.Histogram(state.dataSet3)}
-						options={{
-							scales: {
-								yAxes: [
-									{
-										type: "linear",
-										ticks: {
-											min: 0,
-											max: 10,
-											stepSize: 1,
-										},
-									},
-								],
-							},
-							legend: {
-								display: false,
-							},
-						}}
-					/>
+					<Bar data={chartParameters.data} options={chartParameters.options} />
 				);
 				break;
 			case 6:
