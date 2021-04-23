@@ -8,11 +8,6 @@ type dataset = {
 	borderWidth: 0;
 };
 
-type adapterType = {
-	labels: Array<string>;
-	datasets: Array<dataset>;
-};
-
 export const adapter5 = (input: DataSet3) => {
 	if (input.array.length === 0) {
 		return emptyDataset;
@@ -84,9 +79,15 @@ export const adapter5 = (input: DataSet3) => {
 					{
 						ticks: {
 							beginAtZero: true,
+							min: undefined,
+							max: undefined,
+							stepSize: undefined,
 						},
 					},
 				],
+			},
+			legend: {
+				display: true,
 			},
 		},
 	};
