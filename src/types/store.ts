@@ -1,5 +1,4 @@
 import { RandomDataset } from "../shared/utils/exampleData";
-import { randomColor } from "../shared/utils/randomColor";
 
 export type DataSet = {
 	label: string;

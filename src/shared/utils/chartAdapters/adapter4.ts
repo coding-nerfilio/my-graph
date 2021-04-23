@@ -5,11 +5,8 @@ type dataset = {
 	data: Array<{ x: number; y: number }>;
 	backgroundColor: string;
 };
-type adapterType = {
-	datasets: Array<dataset>;
-};
 
-export const adapter4 = (input: Array<DataSet4>): adapterType => {
+export const adapter4 = (input: Array<DataSet4>) => {
 	let dataArray: Array<dataset> = [];
 
 	input.forEach((dataset) => {

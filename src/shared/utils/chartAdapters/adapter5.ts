@@ -1,13 +1,5 @@
 import { DataSet3 } from "../../../types/store";
 
-type dataset = {
-	label: string;
-	data: Array<number>;
-	backgroundColor: Array<string>;
-	borderColor: Array<string>;
-	borderWidth: 0;
-};
-
 export const adapter5 = (input: DataSet3) => {
 	if (input.array.length === 0) {
 		return emptyDataset;

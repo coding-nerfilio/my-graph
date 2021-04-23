@@ -7,12 +7,8 @@ type dataset = {
 	borderColor: string;
 	tension: number;
 };
-type adapterType = {
-	labels: Array<string>;
-	datasets: Array<dataset>;
-};
 
-export const adapter1 = (data: Array<DataSet1>): adapterType => {
+export const adapter1 = (data: Array<DataSet1>) => {
 	let datasets: Array<dataset> = [];
 	let labels: Array<string> = [];
 	let amountOfLabels = 0;
