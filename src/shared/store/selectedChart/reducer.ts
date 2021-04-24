@@ -1,4 +1,10 @@
-import { DataSet2, DataSet1, DataSet4, DataSet3 } from "../../../types/dataset";
+import {
+	DataSet2,
+	DataSet1,
+	DataSet4,
+	DataSet3,
+	DataSet5,
+} from "../../../types/dataset";
 import { Action, EAction } from "../../../types/store/actions";
 import { State } from "../../../types/store/state";
 import { RandomDataset } from "../../utils/dataGeneration/exampleData";
@@ -6,14 +12,39 @@ import { RandomDataset } from "../../utils/dataGeneration/exampleData";
 const Reducer = (state: State, action: Action): State => {
 	switch (action.type) {
 		case EAction.SELECTEDCHART_SET:
-			return {
-				...state,
-				selectedChart: action.payload,
-				dataSet1: RandomDataset(1) as DataSet1[],
-				dataSet2: RandomDataset(2) as DataSet2[],
-				dataSet3: RandomDataset(3) as DataSet3,
-				dataSet4: RandomDataset(4) as DataSet4[],
-			};
+			switch (action.payload) {
+				case 0:
+					return {
+						...state,
+						dataSet1: RandomDataset(1) as DataSet1[],
+					};
+				case 1:
+					return {
+						...state,
+						dataSet4: RandomDataset(4) as DataSet4[],
+					};
+				case 2:
+				case 3:
+				case 4:
+				case 7:
+					return {
+						...state,
+						dataSet2: RandomDataset(2) as DataSet2[],
+					};
+				case 5:
+					return {
+						...state,
+						dataSet3: RandomDataset(3) as DataSet3,
+					};
+				case 6:
+					return {
+						...state,
+						dataSet5: RandomDataset(5) as DataSet5[],
+					};
+
+				default:
+					return state;
+			}
 		default:
 			return state;
 	}
