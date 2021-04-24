@@ -15,7 +15,10 @@ export const dataSet5 = {
 		type: EAction.DATASET5_SET_RAW,
 		payload: { index, data },
 	}),
-
+	setTitle: (index: number, data: string): Action => ({
+		type: EAction.DATASET5_SET_TITLE,
+		payload: { index, data },
+	}),
 	setColor: (index: number, data: string): Action => ({
 		type: EAction.DATASET5_SET_COLOR,
 		payload: { index, data },

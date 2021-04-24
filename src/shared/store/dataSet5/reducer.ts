@@ -1,6 +1,7 @@
 import { Action, EAction } from "../../../types/store/actions";
 import { State } from "../../../types/store/state";
 import { textToNumberArray } from "../../utils/convertions";
+import { newLabel } from "../../utils/dataGeneration/newLabel";
 import { randomColor } from "../../utils/dataGeneration/randomColor";
 
 const Reducer = (state: State, action: Action): State => {
@@ -22,6 +23,7 @@ const Reducer = (state: State, action: Action): State => {
 							color: randomColor(),
 							raw: "",
 							array: [],
+							label: newLabel(state.dataSet5.datasets.length),
 						},
 					],
 				},
@@ -55,6 +57,12 @@ const Reducer = (state: State, action: Action): State => {
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
 				color: action.payload.data,
+			};
+			return { ...state, dataSet5: { ...state.dataSet5, datasets: clone } };
+		case EAction.DATASET5_SET_TITLE:
+			clone[action.payload.index] = {
+				...clone[action.payload.index],
+				label: action.payload.data,
 			};
 			return { ...state, dataSet5: { ...state.dataSet5, datasets: clone } };
 		default:

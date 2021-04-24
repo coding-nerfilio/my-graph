@@ -73,6 +73,7 @@ export const RandomDataset = (
 				color: string;
 				raw: string;
 				array: number[];
+				label: string;
 			}> = [];
 			for (let i = 0; i < 2; i++) {
 				let data = genRandomNumbers(4);
@@ -80,6 +81,7 @@ export const RandomDataset = (
 					raw: data.raw,
 					array: data.array,
 					color: randomColor(),
+					label: "Example" + i,
 				});
 			}
 			return {

@@ -38,6 +38,7 @@ export enum EAction {
 	DATASET5_SET_RAW,
 	DATASET5_SET_COLOR,
 	DATASET5_SET_LABEL,
+	DATASET5_SET_TITLE,
 }
 
 interface IndexedPayload<T> {
@@ -77,4 +78,5 @@ export type Action =
 	| { type: EAction.DATASET5_REMOVE; payload: number }
 	| { type: EAction.DATASET5_SET_COLOR; payload: IndexedPayload<string> }
 	| { type: EAction.DATASET5_SET_RAW; payload: IndexedPayload<string> }
+	| { type: EAction.DATASET5_SET_TITLE; payload: IndexedPayload<string> }
 	| { type: EAction.DATASET5_SET_LABEL; payload: string };

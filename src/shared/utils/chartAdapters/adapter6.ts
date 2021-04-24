@@ -10,9 +10,9 @@ export const adapter6 = (input: DataSet5) => {
 		borderColor: string;
 		pointBackgroundColor: string;
 	}[] = [];
-	input.datasets.forEach((dataset, index) => {
+	input.datasets.forEach((dataset) => {
 		datasets.push({
-			label: String(index),
+			label: dataset.label,
 			data: dataset.array,
 			fill: true,
 			backgroundColor: dataset.color + "11",
