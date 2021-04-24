@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-graph"]=this["webpackJsonpmy-graph"]||[]).push([[12],{229:function(s,a,c){"use strict";c.r(a),a.default=c.p+"static/media/Tick.d5bc36ac.svg"}}]);
-//# sourceMappingURL=12.018392bd.chunk.js.map

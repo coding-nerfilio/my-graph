@@ -1,2 +1,0 @@
-(this["webpackJsonpmy-graph"]=this["webpackJsonpmy-graph"]||[]).push([[11],{226:function(t,a,s){"use strict";s.r(a),a.default=s.p+"static/media/Scatter Plot.a0ccb720.svg"}}]);
-//# sourceMappingURL=11.6243497b.chunk.js.map
