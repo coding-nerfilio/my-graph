@@ -1,4 +1,10 @@
-import { DataSet1, DataSet2, DataSet3, DataSet4 } from "../../types/dataset";
+import {
+	DataSet1,
+	DataSet2,
+	DataSet3,
+	DataSet4,
+	DataSet5,
+} from "../../../types/dataset";
 import { randomColor } from "./randomColor";
 
 const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {
@@ -14,8 +20,8 @@ const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {
 };
 
 export const RandomDataset = (
-	type: 1 | 2 | 3 | 4
-): DataSet1[] | DataSet2[] | DataSet3 | DataSet4[] => {
+	type: 1 | 2 | 3 | 4 | 5
+): DataSet1[] | DataSet2[] | DataSet3 | DataSet4[] | DataSet5[] => {
 	switch (type) {
 		case 1:
 			let valueForDataset1 = genRandomNumbers(10);
@@ -62,7 +68,24 @@ export const RandomDataset = (
 					arrayY: valueForDataset4.y.array,
 				},
 			];
-
+		case 5:
+			let valueForDataset5 = {
+				x: {
+					raw: "Example1,Example2,Example3,Example4,Example5",
+					array: ["Example1", "Example2", "Example3", "Example4", "Example5"],
+				},
+				y: genRandomNumbers(5),
+			};
+			return [
+				{
+					label: "Example",
+					color: randomColor(),
+					rawX: valueForDataset5.x.raw,
+					arrayX: valueForDataset5.x.array,
+					rawY: valueForDataset5.y.raw,
+					arrayY: valueForDataset5.y.array,
+				},
+			];
 		default:
 			return [];
 	}

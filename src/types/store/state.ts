@@ -1,5 +1,5 @@
-import { RandomDataset } from "../../shared/utils/exampleData";
-import { DataSet1, DataSet2, DataSet3, DataSet4 } from "../dataset";
+import { RandomDataset } from "../../shared/utils/dataGeneration/exampleData";
+import { DataSet1, DataSet2, DataSet3, DataSet4, DataSet5 } from "../dataset";
 
 export type State = {
 	selectedChart: number;
@@ -9,6 +9,7 @@ export type State = {
 	dataSet2: Array<DataSet2>;
 	dataSet3: DataSet3;
 	dataSet4: Array<DataSet4>;
+	dataSet5: Array<DataSet5>;
 };
 
 export const initialState: State = {
@@ -20,4 +21,5 @@ export const initialState: State = {
 	dataSet2: RandomDataset(2) as DataSet2[],
 	dataSet3: RandomDataset(3) as DataSet3,
 	dataSet4: RandomDataset(4) as DataSet4[],
+	dataSet5: RandomDataset(5) as DataSet5[],
 };

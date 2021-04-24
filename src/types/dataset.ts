@@ -32,3 +32,12 @@ export type DataSet4 = {
 	arrayY: Array<number>;
 	color: string;
 };
+
+export type DataSet5 = {
+	label: string;
+	rawX: string;
+	rawY: string;
+	arrayX: Array<string>;
+	arrayY: Array<number>;
+	color: string;
+};
