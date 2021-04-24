@@ -3,9 +3,10 @@ import {
 	BarPieInputs,
 	HistogramInputs,
 	PlotInputs,
+	RadarInputs,
 	ScatterInputs,
 } from "../../ChartEditor/ChartInputs/setups";
-import { State } from "../../types/store";
+import { State } from "../../types/store/state";
 import { Context } from "../store";
 
 const useSelectInput = () => {
@@ -28,6 +29,10 @@ const useSelectInput = () => {
 				break;
 			case 5:
 				setInput(<HistogramInputs />);
+				break;
+			case 6:
+				setInput(<RadarInputs />);
+				break;
 		}
 	}, [state.selectedChart]);
 

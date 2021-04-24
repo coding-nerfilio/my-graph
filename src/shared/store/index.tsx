@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-import { initialState } from "../../types/store";
+import { initialState } from "../../types/store/state";
 import Reducer from "./reducer";
 
 const Store = (props: { children?: any }) => {

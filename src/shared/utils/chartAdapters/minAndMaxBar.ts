@@ -1,4 +1,4 @@
-import { DataSet2 } from "../../../types/store";
+import { DataSet2 } from "../../../types/dataset";
 
 export const minAndMaxBar = (input: DataSet2[]) => {
 	let min = 0,

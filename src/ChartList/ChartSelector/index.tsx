@@ -1,8 +1,9 @@
 import { useContext } from "react";
-
 import { Context } from "../../shared/store";
-import Actions, { Action } from "../../shared/store/actions";
-import { State } from "../../types/store";
+import Actions from "../../shared/store/actions";
+import { Action } from "../../types/store/actions";
+import { State } from "../../types/store/state";
+
 import "./style.scss";
 
 const ChartSelector = (props: {

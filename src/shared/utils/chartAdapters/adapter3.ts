@@ -1,18 +1,6 @@
-import { DataSet2 } from "../../../types/store";
+import { DataSet2 } from "../../../types/dataset";
 
-type dataset = {
-	label: string;
-	data: Array<number>;
-	backgroundColor: Array<string>;
-	hoverOffset: 4;
-};
-
-type adapterType = {
-	labels: Array<string>;
-	datasets: Array<dataset>;
-};
-
-export const adapter3 = (input: Array<DataSet2>): adapterType => {
+export const adapter3 = (input: Array<DataSet2>) => {
 	const labels: Array<string> = [];
 	const data: Array<number> = [];
 	const colors: Array<string> = [];

@@ -1,8 +1,8 @@
-import { State } from "../../../types/store";
-import { sanitizeText, textToArray } from "../../utils/convertions";
-import { newLabel } from "../../utils/newLabel";
-import { randomColor } from "../../utils/randomColor";
-import { Action, EAction } from "../actions";
+import { Action, EAction } from "../../../types/store/actions";
+import { State } from "../../../types/store/state";
+import { sanitizeText, textToNumberArray } from "../../utils/convertions";
+import { newLabel } from "../../utils/dataGeneration/newLabel";
+import { randomColor } from "../../utils/dataGeneration/randomColor";
 
 const Reducer = (state: State, action: Action): State => {
 	let clone = [...state.dataSet1];
@@ -42,7 +42,7 @@ const Reducer = (state: State, action: Action): State => {
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
 				raw: sanitizeText(action.payload.data),
-				array: textToArray(action.payload.data),
+				array: textToNumberArray(action.payload.data),
 			};
 			return { ...state, dataSet1: clone };
 		case EAction.DATASET1_SET_COLOR:

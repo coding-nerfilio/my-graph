@@ -1,4 +1,4 @@
-import { Action, EAction } from "../actions";
+import { Action, EAction } from "../../../types/store/actions";
 
 export const dataSet1 = {
 	clear: (): Action => ({ type: EAction.DATASET1_CLEAR, payload: null }),

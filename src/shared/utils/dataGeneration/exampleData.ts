@@ -1,10 +1,16 @@
-import { DataSet1, DataSet2, DataSet3, DataSet4 } from "../../types/store";
+import {
+	DataSet1,
+	DataSet2,
+	DataSet3,
+	DataSet4,
+	DataSet5,
+} from "../../../types/dataset";
 import { randomColor } from "./randomColor";
 
 const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {
 	let returnValue: { raw: string; array: number[] } = { raw: "", array: [] };
 
-	for (let i = 0; i <= amount; i++) {
+	for (let i = 0; i < amount; i++) {
 		let randomNumber = Math.floor(Math.random() * 100) + 1;
 		returnValue.raw += randomNumber.toString() + ",";
 		returnValue.array.push(randomNumber);
@@ -14,8 +20,8 @@ const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {
 };
 
 export const RandomDataset = (
-	type: 1 | 2 | 3 | 4
-): DataSet1[] | DataSet2[] | DataSet3 | DataSet4[] => {
+	type: 1 | 2 | 3 | 4 | 5
+): DataSet1[] | DataSet2[] | DataSet3 | DataSet4[] | DataSet5 => {
 	switch (type) {
 		case 1:
 			let valueForDataset1 = genRandomNumbers(10);
@@ -62,6 +68,26 @@ export const RandomDataset = (
 					arrayY: valueForDataset4.y.array,
 				},
 			];
+		case 5:
+			let valueForDataset5: Array<{
+				color: string;
+				raw: string;
+				array: number[];
+				label: string;
+			}> = [];
+			for (let i = 0; i < 2; i++) {
+				let data = genRandomNumbers(4);
+				valueForDataset5.push({
+					raw: data.raw,
+					array: data.array,
+					color: randomColor(),
+					label: "Example" + i,
+				});
+			}
+			return {
+				labels: "Example1,Example2,Example3,Example4,Example5",
+				datasets: valueForDataset5,
+			};
 
 		default:
 			return [];

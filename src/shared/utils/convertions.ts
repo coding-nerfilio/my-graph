@@ -1,4 +1,4 @@
-export const textToArray = (input: string): Array<number> => {
+export const textToNumberArray = (input: string): Array<number> => {
 	let returnValue: Array<number> = [];
 
 	//Sanitize text
@@ -27,6 +27,10 @@ export const textToArray = (input: string): Array<number> => {
 	}
 
 	return returnValue;
+};
+
+export const textToTextArray = (input: string) => {
+	return input.split(",");
 };
 
 export const arrayToText = (input: Array<any>) => {
