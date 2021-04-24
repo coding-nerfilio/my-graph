@@ -34,10 +34,6 @@ export type DataSet4 = {
 };
 
 export type DataSet5 = {
-	label: string;
-	rawX: string;
-	rawY: string;
-	arrayX: Array<string>;
-	arrayY: Array<number>;
-	color: string;
+	labels: string;
+	datasets: Array<{ raw: string; array: Array<number>; color: string }>;
 };

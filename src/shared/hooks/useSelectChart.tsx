@@ -1,7 +1,15 @@
 import { useContext, useEffect, useState } from "react";
 
 import { Context } from "../store";
-import { Line, Scatter, Pie, Bar, Doughnut, Polar } from "react-chartjs-2";
+import {
+	Line,
+	Scatter,
+	Pie,
+	Bar,
+	Doughnut,
+	Polar,
+	Radar,
+} from "react-chartjs-2";
 import ChartAdapters from "../utils/chartAdapters";
 import { State } from "../../types/store/state";
 
@@ -50,6 +58,7 @@ const useSelectChart = () => {
 				);
 				break;
 			case 6:
+				setChart(<Radar data={{}} />);
 				break;
 			case 7:
 				setChart(<Polar data={ChartAdapters.Doughnut(state.dataSet2)} />);

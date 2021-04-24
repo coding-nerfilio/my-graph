@@ -1,69 +1,62 @@
 import { Action, EAction } from "../../../types/store/actions";
 import { State } from "../../../types/store/state";
-import {
-	sanitizeText,
-	textToNumberArray,
-	textToTextArray,
-} from "../../utils/convertions";
-import { newLabel } from "../../utils/dataGeneration/newLabel";
+import { textToNumberArray } from "../../utils/convertions";
 import { randomColor } from "../../utils/dataGeneration/randomColor";
 
 const Reducer = (state: State, action: Action): State => {
-	let clone = [...state.dataSet5];
+	let clone = [...state.dataSet5.datasets];
 	switch (action.type) {
 		case EAction.DATASET5_CLEAR:
 			return {
 				...state,
-				dataSet5: [],
+				dataSet5: { ...state.dataSet5, datasets: [] },
 			};
 		case EAction.DATASET5_ADD:
 			return {
 				...state,
-				dataSet5: [
+				dataSet5: {
 					...state.dataSet5,
-					{
-						label: newLabel(state.dataSet5.length),
-						rawX: "",
-						rawY: "",
-						arrayX: [],
-						arrayY: [],
-						color: randomColor(),
-					},
-				],
+					datasets: [
+						...state.dataSet5.datasets,
+						{
+							color: randomColor(),
+							raw: "",
+							array: [],
+						},
+					],
+				},
 			};
 		case EAction.DATASET5_REMOVE:
 			return {
 				...state,
-				dataSet5: state.dataSet5
-					.slice(0, action.payload)
-					.concat(...state.dataSet5.slice(action.payload + 1)),
+				dataSet5: {
+					...state.dataSet5,
+					datasets: state.dataSet5.datasets
+						.slice(0, action.payload)
+						.concat(...state.dataSet5.datasets.slice(action.payload + 1)),
+				},
 			};
 		case EAction.DATASET5_SET_LABEL:
+			return {
+				...state,
+				dataSet5: {
+					...state.dataSet5,
+					labels: action.payload,
+				},
+			};
+		case EAction.DATASET5_SET_RAW:
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
-				label: action.payload.data,
+				raw: action.payload.data,
+				array: textToNumberArray(action.payload.data),
 			};
-			return { ...state, dataSet5: clone };
-		case EAction.DATASET5_SET_RAWX:
-			clone[action.payload.index] = {
-				...clone[action.payload.index],
-				rawX: sanitizeText(action.payload.data),
-				arrayX: textToTextArray(action.payload.data),
-			};
-			return { ...state, dataSet5: clone };
-		case EAction.DATASET5_SET_RAWY:
-			clone[action.payload.index] = {
-				...clone[action.payload.index],
-				rawY: sanitizeText(action.payload.data),
-				arrayY: textToNumberArray(action.payload.data),
-			};
-			return { ...state, dataSet5: clone };
+			return { ...state, dataSet5: { ...state.dataSet5, datasets: clone } };
 		case EAction.DATASET5_SET_COLOR:
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
 				color: action.payload.data,
 			};
-			return { ...state, dataSet5: clone };
+			return { ...state, dataSet5: { ...state.dataSet5, datasets: clone } };
 		default:
 			return state;
 	}

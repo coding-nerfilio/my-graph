@@ -16,11 +16,13 @@ const Reducer = (state: State, action: Action): State => {
 				case 0:
 					return {
 						...state,
+						selectedChart: action.payload,
 						dataSet1: RandomDataset(1) as DataSet1[],
 					};
 				case 1:
 					return {
 						...state,
+						selectedChart: action.payload,
 						dataSet4: RandomDataset(4) as DataSet4[],
 					};
 				case 2:
@@ -29,17 +31,20 @@ const Reducer = (state: State, action: Action): State => {
 				case 7:
 					return {
 						...state,
+						selectedChart: action.payload,
 						dataSet2: RandomDataset(2) as DataSet2[],
 					};
 				case 5:
 					return {
 						...state,
+						selectedChart: action.payload,
 						dataSet3: RandomDataset(3) as DataSet3,
 					};
 				case 6:
 					return {
 						...state,
-						dataSet5: RandomDataset(5) as DataSet5[],
+						selectedChart: action.payload,
+						dataSet5: RandomDataset(5) as DataSet5,
 					};
 
 				default:

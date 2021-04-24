@@ -35,10 +35,9 @@ export enum EAction {
 	DATASET5_CLEAR,
 	DATASET5_ADD,
 	DATASET5_REMOVE,
-	DATASET5_SET_LABEL,
-	DATASET5_SET_RAWX,
-	DATASET5_SET_RAWY,
+	DATASET5_SET_RAW,
 	DATASET5_SET_COLOR,
+	DATASET5_SET_LABEL,
 }
 
 interface IndexedPayload<T> {
@@ -76,7 +75,6 @@ export type Action =
 	| { type: EAction.DATASET5_CLEAR; payload: null }
 	| { type: EAction.DATASET5_ADD; payload: null }
 	| { type: EAction.DATASET5_REMOVE; payload: number }
-	| { type: EAction.DATASET5_SET_LABEL; payload: IndexedPayload<string> }
-	| { type: EAction.DATASET5_SET_RAWX; payload: IndexedPayload<string> }
-	| { type: EAction.DATASET5_SET_RAWY; payload: IndexedPayload<string> }
-	| { type: EAction.DATASET5_SET_COLOR; payload: IndexedPayload<string> };
+	| { type: EAction.DATASET5_SET_COLOR; payload: IndexedPayload<string> }
+	| { type: EAction.DATASET5_SET_RAW; payload: IndexedPayload<string> }
+	| { type: EAction.DATASET5_SET_LABEL; payload: string };

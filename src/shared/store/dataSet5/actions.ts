@@ -7,16 +7,12 @@ export const dataSet5 = {
 		type: EAction.DATASET5_REMOVE,
 		payload: index,
 	}),
-	setLabel: (index: number, data: string): Action => ({
+	setLabel: (data: string): Action => ({
 		type: EAction.DATASET5_SET_LABEL,
-		payload: { index, data },
+		payload: data,
 	}),
-	setRawX: (index: number, data: string): Action => ({
-		type: EAction.DATASET5_SET_RAWX,
-		payload: { index, data },
-	}),
-	setRawY: (index: number, data: string): Action => ({
-		type: EAction.DATASET5_SET_RAWY,
+	setRaw: (index: number, data: string): Action => ({
+		type: EAction.DATASET5_SET_RAW,
 		payload: { index, data },
 	}),
 

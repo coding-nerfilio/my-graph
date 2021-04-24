@@ -9,7 +9,7 @@ export type State = {
 	dataSet2: Array<DataSet2>;
 	dataSet3: DataSet3;
 	dataSet4: Array<DataSet4>;
-	dataSet5: Array<DataSet5>;
+	dataSet5: DataSet5;
 };
 
 export const initialState: State = {
@@ -21,5 +21,5 @@ export const initialState: State = {
 	dataSet2: RandomDataset(2) as DataSet2[],
 	dataSet3: RandomDataset(3) as DataSet3,
 	dataSet4: RandomDataset(4) as DataSet4[],
-	dataSet5: RandomDataset(5) as DataSet5[],
+	dataSet5: RandomDataset(5) as DataSet5,
 };
