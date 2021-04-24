@@ -1,6 +1,6 @@
 import { Action, EAction } from "../../../types/store/actions";
 import { State } from "../../../types/store/state";
-import { sanitizeText, textToArray } from "../../utils/convertions";
+import { sanitizeText, textToNumberArray } from "../../utils/convertions";
 import { newLabel } from "../../utils/dataGeneration/newLabel";
 import { randomColor } from "../../utils/dataGeneration/randomColor";
 
@@ -44,14 +44,14 @@ const Reducer = (state: State, action: Action): State => {
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
 				rawX: sanitizeText(action.payload.data),
-				arrayX: textToArray(action.payload.data),
+				arrayX: textToNumberArray(action.payload.data),
 			};
 			return { ...state, dataSet4: clone };
 		case EAction.DATASET4_SET_RAWY:
 			clone[action.payload.index] = {
 				...clone[action.payload.index],
 				rawY: sanitizeText(action.payload.data),
-				arrayY: textToArray(action.payload.data),
+				arrayY: textToNumberArray(action.payload.data),
 			};
 			return { ...state, dataSet4: clone };
 		case EAction.DATASET4_SET_COLOR:

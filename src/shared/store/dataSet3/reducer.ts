@@ -1,6 +1,6 @@
 import { Action, EAction } from "../../../types/store/actions";
 import { State } from "../../../types/store/state";
-import { sanitizeText, textToArray } from "../../utils/convertions";
+import { sanitizeText, textToNumberArray } from "../../utils/convertions";
 import { randomColor } from "../../utils/dataGeneration/randomColor";
 
 const Reducer = (state: State, action: Action): State => {
@@ -29,7 +29,7 @@ const Reducer = (state: State, action: Action): State => {
 				dataSet3: {
 					...state.dataSet3,
 					raw: sanitizeText(action.payload),
-					array: textToArray(action.payload),
+					array: textToNumberArray(action.payload),
 				},
 			};
 		case EAction.DATASET3_SET_COLOR:
