@@ -58,7 +58,7 @@ const useSelectChart = () => {
 				);
 				break;
 			case 6:
-				setChart(<Radar data={{}} />);
+				setChart(<Radar data={ChartAdapters.Radar(state.dataSet5)} />);
 				break;
 			case 7:
 				setChart(<Polar data={ChartAdapters.Doughnut(state.dataSet2)} />);
@@ -70,6 +70,7 @@ const useSelectChart = () => {
 		state.dataSet2,
 		state.dataSet3,
 		state.dataSet4,
+		state.dataSet5,
 	]);
 
 	return chart;

@@ -10,7 +10,7 @@ import { randomColor } from "./randomColor";
 const genRandomNumbers = (amount: number): { raw: string; array: number[] } => {
 	let returnValue: { raw: string; array: number[] } = { raw: "", array: [] };
 
-	for (let i = 0; i <= amount; i++) {
+	for (let i = 0; i < amount; i++) {
 		let randomNumber = Math.floor(Math.random() * 100) + 1;
 		returnValue.raw += randomNumber.toString() + ",";
 		returnValue.array.push(randomNumber);
@@ -74,8 +74,8 @@ export const RandomDataset = (
 				raw: string;
 				array: number[];
 			}> = [];
-			for (let i = 0; i < 5; i++) {
-				let data = genRandomNumbers(5);
+			for (let i = 0; i < 2; i++) {
+				let data = genRandomNumbers(4);
 				valueForDataset5.push({
 					raw: data.raw,
 					array: data.array,
