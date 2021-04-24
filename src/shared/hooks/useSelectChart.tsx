@@ -61,7 +61,19 @@ const useSelectChart = () => {
 				setChart(<Radar data={ChartAdapters.Radar(state.dataSet5)} />);
 				break;
 			case 7:
-				setChart(<Polar data={ChartAdapters.Doughnut(state.dataSet2)} />);
+				setChart(
+					<Polar
+						data={ChartAdapters.Doughnut(state.dataSet2)}
+						options={{
+							scale: {
+								ticks: {
+									beginAtZero: true,
+									min: 0,
+								},
+							},
+						}}
+					/>
+				);
 				break;
 		}
 	}, [
