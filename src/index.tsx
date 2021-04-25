@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import Store from "./shared/store";
 
 import "./assets/sass/flex.scss";
+import "./assets/sass/font.scss";
 import App from "./app";
 
 ReactDOM.render(

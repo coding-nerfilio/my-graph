@@ -7,11 +7,23 @@
 	overflow-x: hidden;
 	background-color: $chart-editor-background-color;
 	color: white;
-	padding-left: 15px;
-	padding-right: 15px;
+
+	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	justify-items: center;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: black;
+	padding: 10px;
+	width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
