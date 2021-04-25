@@ -1,0 +1,10 @@
+@import "@fontsource/open-sans";
+
+@font-face {
+	font-family: "Open Sans";
+	$fontDir: "~@fontsource/open-sans/files";
+}
+
+* {
+	font-family: "Open Sans";
+}
